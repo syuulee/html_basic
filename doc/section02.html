@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022.08.03 basic02 - 상세페이지</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        .container {
+            display: flex;
+            width: 1170px;
+            margin: 0 auto;
+        }
+
+        .inner {
+            width: 1170px;
+            margin: 0 auto;
+        }
+
+        .dotList li {
+            position: relative;
+            padding: 0 0 0 20px;
+            line-height: 1.2;
+            margin: 0 0 5px 0;
+        }
+
+        .dotList li::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 2px;
+            height: 2px;
+            background: #0d6efd;
+            /* margin: 0 10px 0 0; 
+             vertical-align: middle;
+             dislpay:inline-block으로도 만들 수 있는데 */
+        }
+
+
+        .t_b {
+            color: #0d6efd;
+        }
+
+        .Business {
+            padding: 100px 0;
+        }
+
+        .Business h2 {
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .Business h2::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 3px;
+            background: #0d6efd;
+            margin: 15px auto;
+        }
+
+        .Business>p {
+            margin: 0 0 50px 0;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .Business .container img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .Business figure {
+            position: relative;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .Business figure~figure {
+            border-left: 1px solid transparent;
+        }
+
+        .Business figure .cover {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: rgba(0, 0, 0, 0.75);
+            color: #fff;
+            transition: left 0.5s;
+            padding: 40px 10px;
+        }
+
+        .Business figure:hover .cover {
+            left: 0;
+        }
+
+        .Business figure .cover a {
+            align-self: flex-start;
+            /* .Business figure .cover a가 cover에 flex(stretch가 특징)준 게 있어서 늘어나서  align-items: flex-start; */
+            /* display: inline-block; */
+            /* 늘어날 것을 대비해서 inline-block */
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            margin-top: auto;
+            padding: 10px 15px;
+        }
+
+        .Business figure p {
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.25;
+        }
+
+        .Business figure h3 {
+            /* width: 100%;랑 같은 효과 = align-self:strech*/
+            font-size: 21px;
+            font-weight: 500;
+            padding: 0 0 20px 0;
+            margin: 0 0 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .Business .inner {
+            width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .Business .inner::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .Business .inner>div {
+            float: left;
+            width: 50%;
+            padding: 0 15px;
+        }
+
+        .Business .container {
+            margin: 0 auto 100px auto;
+        }
+
+        /* .Business .tit {
+            position: relative;
+        } */
+
+        .Business .tit strong::before {
+            content: '';
+            position: absolute;
+            /* position을 쓰면 display:block을 안 써도 됨 알아서 박스가 만들어짐 */
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 80px;
+            background: #0d6efd;
+        }
+
+
+        .Business .tit strong {
+            position: relative;
+            display: block;
+            font-size: 30px;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            padding: 0 0 0 20px;
+        }
+
+        .Business .tit p {
+            font-size: 15px;
+            font-weight: 15px;
+            padding: 0 0 0 20px;
+        }
+
+        /* 
+        .Business figure .inbox {
+            transition: 0.5s 0.3s;
+        }
+
+        .Business figure:hover .inbox {
+            transform: translateX(100px);
+        } */
+    </style>
+</head>
+
+<body>
+    <section class="Business">
+        <h2><span class="t_b">our</span> business</h2>
+        <p>새로운 미래를 열어가는 갈라파고스거북이</p>
+        <div class="container">
+            <figure>
+                <div class="inbox">
+                    <img src="../img/hd01.jpg" alt="">
+                </div>
+                <div class="cover">
+                    <h3>주요사업 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, esse.</p>
+
+
+                    <a href="">자세히보기 .....</a>
+                </div>
+            </figure>
+            <figure>
+                <div class="inbox">
+                    <img src="../img/hd04.jpg" alt="">
+                </div>
+                <div class="cover">
+                    <h3>주요사업 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, esse.</p>
+
+
+                    <a href="">자세히보기</a>
+                </div>
+            </figure>
+            <figure>
+                <div class="inbox">
+                    <img src="../img/hd01.jpg" alt="">
+                </div>
+                <div class="cover">
+                    <h3>주요사업 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, esse.</p>
+
+
+                    <a href="">자세히보기</a>
+                </div>
+            </figure>
+            <figure>
+                <div class="inbox">
+                    <img src="../img/hd04.jpg" alt="">
+                </div>
+                <div class="cover">
+                    <h3>주요사업 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, esse.</p>
+
+
+                    <a href="">자세히보기</a>
+                </div>
+            </figure>
+        </div>
+        <div class="inner">
+            <div class="tit">
+                <strong>심플하지만 다 갖춘 갈라파고스거북이</strong>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure minus eveniet quam.</p>
+            </div>
+            <div class="list">
+                <ul class="dotList">
+                    <li>Lorem ipsum dolor sit amet, </li>
+                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure minus eveniet quam. </li>
+                    <li>elit. nostrum.</li>
+                    <li>Vero, esse.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
+
+<!-- 이미지 오버플로우 히든 쉽게 때리기 위해서 div로 감 싸주는 방법 좋음 -->

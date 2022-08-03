@@ -1,0 +1,156 @@
+.dotList li {
+    position: relative;
+    padding: 0 0 0 20px;
+    line-height: 1.2;
+    margin: 0 0 5px 0;
+}
+
+.dotList li::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background: #0d6efd;
+}
+
+.Business {
+    padding: 100px 0;
+}
+
+.Business h2 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.Business h2::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #0d6efd;
+    margin: 15px auto;
+}
+
+.Business>p {
+    margin: 0 0 50px 0;
+    font-weight: 300;
+    text-align: center;
+}
+
+.Business .container img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.Business figure {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+}
+
+.Business figure~figure {
+    border-left: 1px solid transparent;
+}
+
+.Business figure .cover {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    transition: left 0.5s;
+    padding: 40px 10px;
+}
+
+.Business figure:hover .cover {
+    left: 0;
+}
+
+.Business figure .cover a {
+    align-self: flex-start;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin-top: auto;
+    padding: 10px 15px;
+}
+
+.Business figure p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.25;
+}
+
+.Business figure h3 {
+    font-size: 21px;
+    font-weight: 500;
+    padding: 0 0 20px 0;
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.Business .inner {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.Business .inner::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.Business .inner>div {
+    float: left;
+    width: 50%;
+    padding: 0 15px;
+}
+
+.Business .container {
+    margin: 0 auto 100px auto;
+}
+
+/* .Business .tit {
+    position: relative; */
+
+
+.Business .tit strong::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 80px;
+    background: #0d6efd;
+}
+
+
+.Business .tit strong {
+    position: relative;
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    padding: 0 0 0 20px;
+}
+
+.Business .tit p {
+    font-size: 15px;
+    font-weight: 15px;
+    padding: 0 0 0 20px;
+}
+
+/* .Business figure .inbox {
+    transition: 0.5s 0.3s;
+}
+
+.Business figure:hover .inbox {
+    transform: translateX(100px);
+} */
