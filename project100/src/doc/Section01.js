@@ -1,8 +1,6 @@
-import '../css/section01.css';
-
 const Section01 = () => {
     return (
-        <section className="about">
+        <section className="about basicSection">
             <h2><span className="mainColor">CEO's</span> GREETINGS</h2>
             <p>새로운 미래를 열어가는 갈라파고스거북이</p>
             <div className="container">
@@ -24,7 +22,7 @@ const Section01 = () => {
                     <img src="../img/hd01.jpg" alt="" />
                 </figure>
             </div>
-            <div className="inner">
+            <div className="inner pd15">
                 <h3>주요현황</h3>
                 <table className="table">
                     <tr>
@@ -40,7 +38,5 @@ const Section01 = () => {
         </section>
     )
 }
-
-
 
 export default Section01;

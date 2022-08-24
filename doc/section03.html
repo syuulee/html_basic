@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022.08.04. basic03 - 상세페이지</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/basic.css">
+    <style>
+        .Business02 .container {
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .Business02 .container>div {
+            flex: 1;
+        }
+
+        .Business02 .left img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+
+        .Business02 .right {
+            display: flex;
+            flex-direction: column;
+            border-top: 2px solid var(--dc);
+            padding: 40px 0 0 0;
+        }
+
+        .Business02 .right h3 {
+            font-size: 31px;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+        }
+
+        .Business02 .right p {
+            margin: 0 0 30px 0;
+        }
+
+        .Business02 .right .bottom {
+            margin: auto 0 0 0;
+            padding: 20px 20px 40px 20px;
+            background: var(--lc);
+            border-top: 1px solid var(--gc);
+            line-height: 1.2;
+        }
+
+        .Business02 .inner {
+            padding: 0 15px;
+        }
+
+        .Business02 .inner h3 {
+            font-size: 27px;
+            font-weight: 500;
+            margin: 0 0 30px 0;
+        }
+
+        .Business02 .inner h3::before {
+            content: "/";
+            color: var(--mc);
+            font-size: 18px;
+            font-weight: 900;
+            margin: 0 10px 0 0;
+            display: inline-block;
+            transform: translateY(-10px) rotate(20deg);
+            /* transform은 block요소에만 적용가능함 */
+        }
+
+        .Business02 .inner ul {
+            padding: 20px 0;
+            border-top: 1px solid var(--dc);
+            border-bottom: 1px solid var(--dc);
+        }
+
+        .Business02 .inner ul>li {
+            float: left;
+            width: 50%;
+            padding: 5px 0;
+        }
+
+        .Business02 .inner ul>li::before {
+            content: attr(date-num);
+            display: inline-block;
+            padding: 5px;
+            color: var(--lc);
+            background: var(--dc);
+            border-radius: 13px;
+            margin: 0 15px 0 0;
+            font-style: italic;
+            /* 텍스트는 가로/세로 길이가 달라서 정확한 정사각형이 만들어지지 않음. 정사각형에 보더라디우스50%을 하면 원이 되지만, 직사각형은 타원이 됨. 그래서 px로 줌 */
+        }
+    </style>
+</head>
+
+<body>
+    <section class="Business02  basicSection">
+        <h2><span>OUR</span> BUSINESS</h2>
+        <p>거북목 땅거북과에 속하며, 갈라파고스를 상징하는 동물이다.</p>
+        <div class="container">
+            <div class="left">
+                <figure>
+                    <img src="../img/hd01.jpg" alt="" />
+                </figure>
+            </div>
+            <div class="right">
+                <h3>심플하지만 다 갖춘 갈라파고스거북쓰</h3>
+                <p>갈라파고스거북이에 대해서 알아보겠다.</p>
+
+                <ul class="dotList">
+                    <li>갈라파고스거북이에 대해서 알아보겠다.</li>
+                    <li>심플하지만 다 갖춘 갈라파고스거북쓰</li>
+                    <li>갈라파고스거북이에 대해서 알아보겠다.</li>
+                    <li>심플하지만 다 갖춘 갈라파고스거북쓰</li>
+                </ul>
+
+                <div class="bottom">
+                    <p>갈라파고스거북이에 대해서 알아보겠다. <br />심플하지만 다 갖춘 갈라파고스거북쓰</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="inner">
+            <h3>심플하지만 다 갖춘 갈라파고스거북쓰</h3>
+            <ul class="row">
+                <li date-num="01">갈라파고스거북이에 대해서 알아보겠다.</li>
+                <li date-num="02">심플하지만 다 갖춘 갈라파고스거북쓰</li>
+                <li date-num="03">갈라파고스거북이에 대해서 알아보겠다.</li>
+                <li date-num="04">심플하지만 다 갖춘 갈라파고스거북쓰</li>
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>

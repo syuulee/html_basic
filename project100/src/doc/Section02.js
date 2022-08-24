@@ -1,8 +1,7 @@
-import '../css/section02.css';
-
 const Section02 = () => {
     return (
-        <section className="Business">
+
+        <section className="Business basicSection">
             <h2><span className="mainColor">our</span> business</h2>
             <p>새로운 미래를 열어가는 갈라파고스거북이</p>
             <div className="container">
@@ -70,6 +69,7 @@ const Section02 = () => {
                 </div>
             </div>
         </section>
+
     )
 }
 
